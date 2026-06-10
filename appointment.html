@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Appointment Booking</title>
+</head>
+<body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="assets/logo-white.png" alt="logo" class="logo-white" />
+            <img src="assets/logo-white.png" alt="logo" class="logo-dark" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-4-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#">SERVICES <i class="ri-arrow-down-s-line"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <a href="services.html">Animal Health <i class="ri-arrow-right-s-line"></i></a>
+              <ul class="dropdown-submenu-menu">
+                <li><a href="onehaelth.html">Consultancy-One Health</a></li>
+                <li><a href="services.html#disease-control">Disease Control &amp; Treatment</a></li>
+                <li><a href="services.html#livestock-treatment">Livestock Treatment &amp; Diagnotics  </a></li>
+                <li><a href="services.html#animal-insurance">Animal Insurance &amp; Subscription</a></li>
+                <li><a href="#">Reproductive Health  &amp;Breading Management</a></li>
+                <li><a href="#">Nutritional Assessment &amp; Feeding Programs</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="services.html">Products <i class="ri-arrow-right-s-line"></i></a>
+              <!-- <ul class="dropdown-submenu-menu">
+                <li><a href="services.html#amr">Rapid Test Kits</a></li>
+                <li><a href="services.html#zoonoses">Vet Packs</a></li>
+                <li><a href="services.html#climate-change">Bags</a></li>
+                <li><a href="services.html#climate-change">RFID Tags</a></li>
+              </ul> -->
+            </li>
+             <li class="dropdown-submenu">
+              <a href="#">Colaborations <i class="ri-arrow-right-s-line"></i></a>
+              <ul class="dropdown-submenu-menu">
+                <li><a href="#">  Government</a></li>
+                <li><a href="#">Phamarceuticals</a></li>
+                <li><a href="#">Institutions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="appointment.html">APPOINTMENT BOOKING</a></li>
+        <li><a href="contacts.html">CONTACT US</a></li>
+        <li><a href="ourteam.html">OUR TEAM</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav__link" title="Home">
+        <i class="ri-home-4-line"></i>
+        <span>Home</span>
+      </a>
+      <a href="services.html" class="mobile-nav__link" title="Services">
+        <i class="ri-tools-line"></i>
+        <span>Services</span>
+      </a>
+      <a href="appointment.html" class="mobile-nav__link" title="Appointment">
+        <i class="ri-calendar-line"></i>
+        <span>Book</span>
+      </a>
+      <a href="ourteam.html" class="mobile-nav__link" title="Our Team">
+        <i class="ri-team-line"></i>
+        <span>Team</span>
+      </a>
+      <a href="contacts.html" class="mobile-nav__link" title="Contact">
+        <i class="ri-phone-line"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+
+    <section class="appointment">
+        <h2>Book Your Appointment</h2>
+        <p>Fill out the form below and we'll send your appointment details via WhatsApp.</p>
+        <form class="booking-form" onsubmit="sendWhatsAppMessage(event)">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Service Type</label>
+                <select id="service" name="service" required>
+                    <option value="">Select Service</option>
+                    <option value="vaccination">Vaccination</option>
+                    <option value="surgery">Surgery</option>
+                    <option value="deworming">Deworming</option>
+                    <option value="pet-grooming">Pet Grooming</option>
+                    <option value="livestock-treatment">Livestock Treatment &amp; Diagnotics  </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send WhatsApp Message</button>
+        </form>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
+
+            // Format service name for display
+            const serviceNames = {
+                'vaccination': 'Vaccination',
+                'surgery': 'Surgery',
+                'deworming': 'Deworming',
+                'pet-grooming': 'Pet Grooming',
+                'livestock-treatment': 'Livestock Treatment &amp; Diagnotics  '
+            };
+
+            const serviceDisplay = serviceNames[service] || service;
+
+            // Create WhatsApp message
+            const whatsappMessage = `*New Appointment Request*%0A%0A` +
+                `*Name:* ${name}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Phone:* ${phone}%0A` +
+                `*Service:* ${serviceDisplay}%0A` +
+                `*Preferred Date:* ${date}%0A` +
+                `*Additional Message:* ${message || 'None'}%0A%0A` +
+                `*Contact Number:* ${phone}`;
+
+            // WhatsApp URL with Kenya country code (254) + number (725587044)
+            const whatsappURL = `https://wa.me/254726587044?text=${whatsappMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+
+            // Optional: Reset form after sending
+            // document.querySelector('.booking-form').reset();
+        }
+    </script>
+</body>
+</html>

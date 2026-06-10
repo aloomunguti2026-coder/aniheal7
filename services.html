@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Our Services</title>
+</head>
+<body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="assets/logo-white.png" alt="logo" class="logo-white" />
+            <img src="assets/logo-white.png" alt="logo" class="logo-dark" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-4-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#">SERVICES <i class="ri-arrow-down-s-line"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+              <a href="services.html">Animal Health <i class="ri-arrow-right-s-line"></i></a>
+              <ul class="dropdown-submenu-menu">
+                <li><a href="onehaelth.html">Consultancy-One Health</a></li>
+                <li><a href="#disease-control">Disease Control &amp; Treatment</a></li>
+                <li><a href="#livestock-treatment">Livestock Treatment &amp; Diagnotics  </a></li>
+                <li><a href="#animal-insurance">Animal Insurance &amp; Subscription</a></li>
+                <li><a href="#">Reproductive Health  &amp;Breading Management</a></li>
+                <li><a href="#">Nutritional Assessment &amp; Feeding Programs</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#">Products <i class="ri-arrow-right-s-line"></i></a>
+              <!-- <ul class="dropdown-submenu-menu">
+                <li><a href="#">Rapid Test Kits</a></li>
+                <li><a href="#">Vet Packs</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><a href="#">RFID Tags</a></li>
+              </ul> -->
+            </li>
+             <li class="dropdown-submenu">
+              <a href="#">Colaborations <i class="ri-arrow-right-s-line"></i></a>
+              <ul class="dropdown-submenu-menu">
+                <li><a href="#">  Government</a></li>
+                <li><a href="#">Phamarceuticals</a></li>
+                <li><a href="#">Institutions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="appointment.html">APPOINTMENT BOOKING</a></li>
+        <li><a href="contacts.html">CONTACT US</a></li>
+        <li><a href="ourteam.html">OUR TEAM</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav__link" title="Home">
+        <i class="ri-home-4-line"></i>
+        <span>Home</span>
+      </a>
+      <a href="services.html" class="mobile-nav__link" title="Services">
+        <i class="ri-tools-line"></i>
+        <span>Services</span>
+      </a>
+      <a href="appointment.html" class="mobile-nav__link" title="Appointment">
+        <i class="ri-calendar-line"></i>
+        <span>Book</span>
+      </a>
+      <a href="ourteam.html" class="mobile-nav__link" title="Our Team">
+        <i class="ri-team-line"></i>
+        <span>Team</span>
+      </a>
+      <a href="contacts.html" class="mobile-nav__link" title="Contact">
+        <i class="ri-phone-line"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+
+    <section class="services">
+        <h2>Our Veterinary Services</h2>
+        <p>Comprehensive animal healthcare solutions for pets and livestock</p>
+        
+        <div class="services__container">
+
+            <div class="service-card">
+                <img src="assets/surgery.jpeg" alt="Surgery Service" class="service-card__image">
+                <div class="service-card__content">
+                    <!-- <i class="ri-surgical-mask-line"></i> -->
+                    <h3>Surgery</h3>
+                    <p>Advanced surgical procedures performed by experienced veterinarians using modern equipment and techniques for safe outcomes.</p>
+                    <a href="https://wa.me/254726587044?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20Surgery%20services." target="_blank" class="whatsapp-btn">
+                        <i class="ri-whatsapp-line"></i>
+                        Book Now
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="service-card" id="disease-control">
+                <img src="assets/vaccination-2.jpeg" alt="Pet Grooming Service" class="service-card__image">
+                <div class="service-card__content">
+                    <!-- <i class="ri-scissors-cut-line"></i> -->
+                    <h3>Vaccination</h3>
+                    <p>Professional grooming services including bathing, trimming, and nail care to keep your pets looking and feeling their best.</p>
+                    <a href="https://wa.me/254726587044?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20Pet%20Grooming%20services." target="_blank" class="whatsapp-btn">
+                        <i class="ri-whatsapp-line"></i>
+                        Book Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card" id="livestock-treatment">
+                <img src="assets/livestock treatment.jpeg" alt="Livestock Treatment &amp; Diagnotics  " class="service-card__image">
+                <div class="service-card__content">
+                    <i class="ri-livestock-line"></i>
+                    <h3>Livestock Treatment &amp; Diagnotics  </h3>
+                    <p>Specialized treatment and care for cattle, goats, sheep, and other livestock to maximize productivity and health.</p>
+                    <a href="https://wa.me/254726587044?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20Livestock%20Treatment%20services." target="_blank" class="whatsapp-btn">
+                        <i class="ri-whatsapp-line"></i>
+                        Book Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+</html>
